@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Bell, ShoppingCart, Search, MapPin, ChevronDown } from "lucide-react";
 
-export default function SushiRushHeader() {
+interface SushiRushHeaderProps {
+  searchQuery?: string;
+  onSearchChange?: (query: string) => void;
+  cartCount?: number;
+}
+
+export default function SushiRushHeader({ searchQuery = "", onSearchChange, cartCount = 0 }: SushiRushHeaderProps) {
   return (
     <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[400] pt-16">
       <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6">
@@ -27,6 +33,8 @@ export default function SushiRushHeader() {
                         <input
                           type="text"
                           placeholder="Search SushiRush"
+                          value={searchQuery}
+                          onChange={(e) => onSearchChange?.(e.target.value)}
                           className="flex-grow bg-transparent outline-none text-sm font-medium"
                         />
                       </div>
@@ -78,7 +86,7 @@ export default function SushiRushHeader() {
             <div className="flex">
               <button className="bg-red-600 text-white rounded-full px-3 py-1 flex items-center gap-1 hover:bg-red-700 transition-colors min-h-8">
                 <ShoppingCart className="h-4 w-4" />
-                <span className="font-bold text-sm">0</span>
+                <span className="font-bold text-sm">{cartCount}</span>
               </button>
             </div>
 

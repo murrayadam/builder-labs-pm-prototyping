@@ -51,13 +51,17 @@ export default function Order() {
     }
   };
 
+  const totalCartItems = Object.values(quantities).reduce((sum, qty) => sum + qty, 0);
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <SushiRushHeader />
-      <CategorySection onCategoryClick={handleCategoryClick} />
-      <MenuFilters
+      <SushiRushHeader
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
+        cartCount={totalCartItems}
+      />
+      <CategorySection onCategoryClick={handleCategoryClick} />
+      <MenuFilters
         activeFilters={activeFilters}
         onFilterToggle={handleFilterToggle}
       />

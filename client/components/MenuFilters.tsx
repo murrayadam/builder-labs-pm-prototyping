@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, Filter, X } from "lucide-react";
+import { Filter, X } from "lucide-react";
 
 interface MenuFiltersProps {
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
   activeFilters: string[];
   onFilterToggle: (filter: string) => void;
 }
@@ -19,24 +16,10 @@ const filterOptions = [
   { id: "trending", label: "Trending", color: "bg-yellow-100 text-yellow-800" },
 ];
 
-export default function MenuFilters({ searchQuery, onSearchChange, activeFilters, onFilterToggle }: MenuFiltersProps) {
+export default function MenuFilters({ activeFilters, onFilterToggle }: MenuFiltersProps) {
   return (
     <div className="bg-white border-b border-gray-200 sticky top-48 z-[250] py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Search Bar */}
-        <div className="mb-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <Input
-              type="text"
-              placeholder="Search menu items..."
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              className="pl-10 bg-gray-50 border-gray-200 focus:border-red-500 focus:ring-red-500"
-            />
-          </div>
-        </div>
-
         {/* Filters */}
         <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide">
           <div className="flex items-center gap-1 text-sm font-medium text-gray-600 whitespace-nowrap">
