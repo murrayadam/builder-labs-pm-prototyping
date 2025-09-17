@@ -1,4 +1,4 @@
-import SushiRushHeader from "@/components/DoorDashHeader";
+import SushiRushHeader from "@/components/SushiRushHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Fish, Star, Clock, Plus, Minus, ShoppingCart } from "lucide-react";
