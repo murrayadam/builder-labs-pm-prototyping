@@ -7,124 +7,185 @@ import {
   Truck, 
   Star, 
   ArrowRight, 
-  Package,
-  MapPin,
-  Timer
+  Package
 } from "lucide-react";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-50 to-white py-20 sm:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Never run out of
-                <span className="text-primary block">toilet paper</span>
-                again
-              </h1>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                Get premium toilet paper delivered to your door in 30 minutes or less. 
-                From everyday essentials to luxury brands, we've got you covered.
+      <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black leading-tight mb-8">
+            Toilet paper delivery
+            <br />
+            <span className="text-primary">in 30 minutes</span>
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
+            Premium toilet paper delivered to your door. 
+            From everyday essentials to luxury brands.
+          </p>
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 rounded-full font-semibold">
+            Order now
+          </Button>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <Clock className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Fast delivery</h3>
+              <p className="text-gray-600">
+                Get your toilet paper in 30 minutes or less with our network of local runners.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-base px-8 py-6">
-                  Order now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" size="lg" className="text-base px-8 py-6">
-                  Learn more
-                </Button>
-              </div>
-              <div className="mt-8 flex items-center space-x-6 text-sm text-muted-foreground">
-                <div className="flex items-center">
-                  <Star className="h-4 w-4 text-yellow-400 mr-1" />
-                  <span className="font-medium">4.9/5</span>
-                  <span className="ml-1">from 50k+ reviews</span>
-                </div>
-              </div>
             </div>
             
-            <div className="relative">
-              <div className="relative bg-white rounded-2xl shadow-2xl p-8">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-brand-50 rounded-xl p-6 text-center">
-                    <Package className="h-12 w-12 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold text-foreground">Premium Brands</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Charmin, Cottonelle & more</p>
-                  </div>
-                  <div className="bg-green-50 rounded-xl p-6 text-center">
-                    <Timer className="h-12 w-12 text-green-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-foreground">30min Delivery</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Lightning fast service</p>
-                  </div>
-                  <div className="bg-purple-50 rounded-xl p-6 text-center">
-                    <Shield className="h-12 w-12 text-purple-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-foreground">Quality Guaranteed</h3>
-                    <p className="text-sm text-muted-foreground mt-1">100% satisfaction promise</p>
-                  </div>
-                  <div className="bg-orange-50 rounded-xl p-6 text-center">
-                    <MapPin className="h-12 w-12 text-orange-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-foreground">Track Order</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Real-time updates</p>
-                  </div>
-                </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <Package className="h-8 w-8 text-primary" />
               </div>
+              <h3 className="text-xl font-bold text-black mb-3">Premium brands</h3>
+              <p className="text-gray-600">
+                Choose from Charmin, Cottonelle, Angel Soft and other trusted brands.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                <Shield className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Quality guaranteed</h3>
+              <p className="text-gray-600">
+                100% satisfaction promise. Not happy? We'll make it right.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Toilet paper delivery in 3 simple steps
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+              How it works
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Emergency run out? No problem. Get what you need when you need it.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Get toilet paper delivered in three simple steps
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="text-center border-none shadow-lg">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Package className="h-8 w-8 text-primary" />
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="bg-gray-50 rounded-2xl p-8 mb-6">
+                <div className="text-3xl font-bold text-primary mb-2">1</div>
+                <Package className="h-12 w-12 text-gray-400 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Choose your products</h3>
+              <p className="text-gray-600">
+                Browse our selection of premium toilet paper brands and add to cart.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-gray-50 rounded-2xl p-8 mb-6">
+                <div className="text-3xl font-bold text-primary mb-2">2</div>
+                <Truck className="h-12 w-12 text-gray-400 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">We pick and pack</h3>
+              <p className="text-gray-600">
+                Our team carefully selects your items and prepares for delivery.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-gray-50 rounded-2xl p-8 mb-6">
+                <div className="text-3xl font-bold text-primary mb-2">3</div>
+                <Clock className="h-12 w-12 text-gray-400 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold text-black mb-3">Delivered fast</h3>
+              <p className="text-gray-600">
+                Track your order and receive it at your door in 30 minutes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Products */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-black mb-12 text-center">Popular products</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
+                  <Package className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Choose your rolls</h3>
-                <p className="text-muted-foreground">
-                  Browse our selection of premium toilet paper brands. From ultra-soft to eco-friendly options.
-                </p>
+                <h3 className="font-bold text-black mb-1">Charmin Ultra Soft</h3>
+                <p className="text-sm text-gray-600 mb-3">12 mega rolls</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-bold text-black">$12.99</span>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                    Add
+                  </Button>
+                </div>
               </CardContent>
             </Card>
-            
-            <Card className="text-center border-none shadow-lg">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Clock className="h-8 w-8 text-primary" />
+
+            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
+                  <Package className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Lightning delivery</h3>
-                <p className="text-muted-foreground">
-                  Our local runners deliver your order in 30 minutes or less, guaranteed.
-                </p>
+                <h3 className="font-bold text-black mb-1">Cottonelle Clean Care</h3>
+                <p className="text-sm text-gray-600 mb-3">8 regular rolls</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-bold text-black">$8.99</span>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                    Add
+                  </Button>
+                </div>
               </CardContent>
             </Card>
-            
-            <Card className="text-center border-none shadow-lg">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Truck className="h-8 w-8 text-primary" />
+
+            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
+                  <Package className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Delivered with care</h3>
-                <p className="text-muted-foreground">
-                  Contactless delivery to your door. Track your order in real-time.
-                </p>
+                <h3 className="font-bold text-black mb-1">Angel Soft Mega Rolls</h3>
+                <p className="text-sm text-gray-600 mb-3">6 mega rolls</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-bold text-black">$6.99</span>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                    Add
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
+                  <Package className="h-8 w-8 text-gray-400" />
+                </div>
+                <h3 className="font-bold text-black mb-1">Quilted Northern</h3>
+                <p className="text-sm text-gray-600 mb-3">12 regular rolls</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-lg font-bold text-black">$9.99</span>
+                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                    Add
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -132,62 +193,57 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-20 sm:py-24">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ready to never run out again?
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+            Never run out again
           </h2>
-          <p className="text-xl text-primary-foreground/80 mb-8">
-            Join thousands of happy customers who trust RollRush for their toilet paper needs.
+          <p className="text-xl text-gray-600 mb-10">
+            Join thousands who trust RollRush for reliable toilet paper delivery.
           </p>
-          <Button size="lg" variant="secondary" className="text-lg px-12 py-6">
-            Start ordering now
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-4 rounded-full font-semibold">
+            Get started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-muted py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+      <footer className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">R</span>
-                </div>
-                <span className="text-xl font-bold text-foreground">RollRush</span>
-              </div>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg font-bold text-black mb-4">RollRush</h3>
+              <p className="text-gray-600 text-sm">
                 Premium toilet paper delivery in 30 minutes or less.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Company</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="/about" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="/how-it-works" className="hover:text-foreground transition-colors">How it works</a></li>
-                <li><a href="/careers" className="hover:text-foreground transition-colors">Careers</a></li>
+              <h4 className="font-semibold text-black mb-4">Company</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="/about" className="text-gray-600 hover:text-black">About</a></li>
+                <li><a href="/how-it-works" className="text-gray-600 hover:text-black">How it works</a></li>
+                <li><a href="/careers" className="text-gray-600 hover:text-black">Careers</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Support</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="/help" className="hover:text-foreground transition-colors">Help Center</a></li>
-                <li><a href="/contact" className="hover:text-foreground transition-colors">Contact</a></li>
-                <li><a href="/track" className="hover:text-foreground transition-colors">Track Order</a></li>
+              <h4 className="font-semibold text-black mb-4">Support</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="/help" className="text-gray-600 hover:text-black">Help Center</a></li>
+                <li><a href="/contact" className="text-gray-600 hover:text-black">Contact</a></li>
+                <li><a href="/track" className="text-gray-600 hover:text-black">Track Order</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Legal</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><a href="/privacy" className="hover:text-foreground transition-colors">Privacy</a></li>
-                <li><a href="/terms" className="hover:text-foreground transition-colors">Terms</a></li>
+              <h4 className="font-semibold text-black mb-4">Legal</h4>
+              <ul className="space-y-3 text-sm">
+                <li><a href="/privacy" className="text-gray-600 hover:text-black">Privacy</a></li>
+                <li><a href="/terms" className="text-gray-600 hover:text-black">Terms</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 RollRush. All rights reserved.</p>
+          <div className="border-t border-gray-200 pt-8 text-center">
+            <p className="text-sm text-gray-500">&copy; 2024 RollRush. All rights reserved.</p>
           </div>
         </div>
       </footer>
