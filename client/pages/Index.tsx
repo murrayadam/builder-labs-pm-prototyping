@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { Clock, Shield, Truck, Star, ArrowRight, Package, Fish } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -21,10 +22,11 @@ export default function Index() {
             rolls to premium sashimi.
           </p>
           <Button
+            asChild
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 rounded-full font-semibold"
           >
-            Order now
+            <Link to="/order">Order now</Link>
           </Button>
         </div>
       </section>
@@ -233,11 +235,14 @@ export default function Index() {
             delivery.
           </p>
           <Button
+            asChild
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-4 rounded-full font-semibold"
           >
-            Get started
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <Link to="/order">
+              Get started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </section>
