@@ -53,7 +53,7 @@ export default function DoorDashHeader() {
                         </div>
                         <input
                           type="text"
-                          placeholder="Search DoorDash"
+                          placeholder="Search SushiRush"
                           className="flex-grow bg-transparent outline-none text-sm font-medium"
                         />
                       </div>
