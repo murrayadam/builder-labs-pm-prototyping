@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, User, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -38,8 +39,8 @@ export default function Header() {
               <User className="h-4 w-4 mr-2" />
               Sign in
             </Button>
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium px-4 py-2 rounded-full">
-              Order now
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white font-medium px-4 py-2 rounded-full">
+              <Link to="/order">Order now</Link>
             </Button>
             <Button variant="ghost" size="sm" className="lg:hidden">
               <Menu className="h-5 w-5" />
