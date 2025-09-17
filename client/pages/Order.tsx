@@ -44,10 +44,17 @@ export default function Order() {
     });
   }, [searchQuery, activeFilters]);
 
+  const handleCategoryClick = (categoryId: string) => {
+    const element = document.getElementById(categoryId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <SushiRushHeader />
-      <CategorySection />
+      <CategorySection onCategoryClick={handleCategoryClick} />
       <MenuFilters
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}

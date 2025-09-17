@@ -10,8 +10,10 @@ interface MenuCategoryProps {
 export default function MenuCategory({ title, items, quantities, onQuantityChange }: MenuCategoryProps) {
   if (items.length === 0) return null;
 
+  const categoryId = title.toLowerCase().replace(/\s+/g, '-');
+
   return (
-    <div className="mb-8">
+    <div id={categoryId} className="mb-8">
       <h2 className="text-2xl font-bold text-black mb-4 sticky top-64 bg-white py-2 z-[200]">
         {title}
       </h2>
