@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { Clock, Shield, Truck, Star, ArrowRight, Package } from "lucide-react";
+import { Clock, Shield, Truck, Star, ArrowRight, Package, Fish } from "lucide-react";
 
 export default function Index() {
   return (
@@ -12,13 +12,13 @@ export default function Index() {
       <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black leading-tight mb-8">
-            Toilet paper delivery
+            Fresh sushi delivery
             <br />
             <span className="text-primary">in 30 minutes</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Premium toilet paper delivered to your door. From everyday
-            essentials to luxury brands.
+            Fresh, authentic sushi delivered to your door. From classic
+            rolls to premium sashimi.
           </p>
           <Button
             size="lg"
@@ -41,21 +41,21 @@ export default function Index() {
                 Fast delivery
               </h3>
               <p className="text-gray-600">
-                Get your toilet paper in 30 minutes or less with our network of
-                local runners.
+                Get fresh sushi in 30 minutes or less with our network of
+                local delivery partners.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
-                <Package className="h-8 w-8 text-primary" />
+                <Fish className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">
-                Premium brands
+                Fresh ingredients
               </h3>
               <p className="text-gray-600">
-                Choose from Charmin, Cottonelle, Angel Soft and other trusted
-                brands.
+                Made with premium fish, seasoned rice, and authentic Japanese
+                ingredients.
               </p>
             </div>
 
@@ -82,7 +82,7 @@ export default function Index() {
               How it works
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Get toilet paper delivered in three simple steps
+              Get fresh sushi delivered in three simple steps
             </p>
           </div>
 
@@ -93,10 +93,10 @@ export default function Index() {
                 <Package className="h-12 w-12 text-gray-400 mx-auto" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">
-                Choose your products
+                Choose your sushi
               </h3>
               <p className="text-gray-600">
-                Browse our selection of premium toilet paper brands and add to
+                Browse our selection of fresh sushi rolls, sashimi, and sets and add to
                 cart.
               </p>
             </div>
@@ -107,10 +107,10 @@ export default function Index() {
                 <Truck className="h-12 w-12 text-gray-400 mx-auto" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">
-                We pick and pack
+                We prepare fresh
               </h3>
               <p className="text-gray-600">
-                Our team carefully selects your items and prepares for delivery.
+                Our expert sushi chefs prepare your order fresh and pack carefully for delivery.
               </p>
             </div>
 
@@ -134,18 +134,18 @@ export default function Index() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-black mb-12 text-center">
-            Popular products
+            Popular sushi
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Package className="h-8 w-8 text-gray-400" />
+                  <Fish className="h-8 w-8 text-gray-400" />
                 </div>
                 <h3 className="font-bold text-black mb-1">
-                  Charmin Ultra Soft
+                  California Roll
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">12 mega rolls</p>
+                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-bold text-black">$12.99</span>
                   <Button
@@ -161,14 +161,14 @@ export default function Index() {
             <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Package className="h-8 w-8 text-gray-400" />
+                  <Fish className="h-8 w-8 text-gray-400" />
                 </div>
                 <h3 className="font-bold text-black mb-1">
-                  Cottonelle Clean Care
+                  Salmon Avocado Roll
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">8 regular rolls</p>
+                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$8.99</span>
+                  <span className="text-lg font-bold text-black">$15.99</span>
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-white rounded-full"
@@ -182,14 +182,14 @@ export default function Index() {
             <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Package className="h-8 w-8 text-gray-400" />
+                  <Fish className="h-8 w-8 text-gray-400" />
                 </div>
                 <h3 className="font-bold text-black mb-1">
-                  Angel Soft Mega Rolls
+                  Spicy Tuna Roll
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">6 mega rolls</p>
+                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$6.99</span>
+                  <span className="text-lg font-bold text-black">$13.99</span>
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-white rounded-full"
@@ -203,12 +203,12 @@ export default function Index() {
             <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Package className="h-8 w-8 text-gray-400" />
+                  <Fish className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="font-bold text-black mb-1">Quilted Northern</h3>
-                <p className="text-sm text-gray-600 mb-3">12 regular rolls</p>
+                <h3 className="font-bold text-black mb-1">Rainbow Roll</h3>
+                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$9.99</span>
+                  <span className="text-lg font-bold text-black">$18.99</span>
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-white rounded-full"
@@ -226,10 +226,10 @@ export default function Index() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
-            Never run out again
+            Craving sushi? We deliver
           </h2>
           <p className="text-xl text-gray-600 mb-10">
-            Join thousands who trust RollRush for reliable toilet paper
+            Join thousands who trust SushiRush for fresh, authentic sushi
             delivery.
           </p>
           <Button
@@ -390,9 +390,9 @@ export default function Index() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className="text-lg font-bold text-black mb-4">RollRush</h3>
+              <h3 className="text-lg font-bold text-black mb-4">SushiRush</h3>
               <p className="text-gray-600 text-sm">
-                Premium toilet paper delivery in 30 minutes or less.
+                Fresh, authentic sushi delivery in 30 minutes or less.
               </p>
             </div>
             <div>
@@ -456,7 +456,7 @@ export default function Index() {
           </div>
           <div className="border-t border-gray-200 pt-8 text-center">
             <p className="text-sm text-gray-500">
-              &copy; 2024 RollRush. All rights reserved.
+              &copy; 2024 SushiRush. All rights reserved.
             </p>
           </div>
         </div>
