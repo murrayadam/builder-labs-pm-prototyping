@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Bell, ShoppingCart, Search, MapPin, ChevronDown } from "lucide-react";
 
-export default function DoorDashHeader() {
+export default function SushiRushHeader() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[400] pt-16">
       <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6">
