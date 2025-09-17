@@ -9,7 +9,7 @@ interface SushiRushHeaderProps {
 
 export default function SushiRushHeader({ searchQuery = "", onSearchChange, cartCount = 0 }: SushiRushHeaderProps) {
   return (
-    <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[400] pt-16">
+    <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[400]">
       <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6">
         {/* Logo */}
         <div className="flex items-center gap-3 w-56">
