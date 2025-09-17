@@ -7,14 +7,14 @@ interface PlaceholderProps {
   description?: string;
 }
 
-export default function Placeholder({ 
-  title, 
-  description = "This page is coming soon. Continue the conversation to help build out this section." 
+export default function Placeholder({
+  title,
+  description = "This page is coming soon. Continue the conversation to help build out this section.",
 }: PlaceholderProps) {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <section className="py-20 sm:py-24">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <Construction className="h-16 w-16 text-muted-foreground mx-auto mb-6" />

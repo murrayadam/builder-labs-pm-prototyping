@@ -1,20 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { 
-  Clock, 
-  Shield, 
-  Truck, 
-  Star, 
-  ArrowRight, 
-  Package
-} from "lucide-react";
+import { Clock, Shield, Truck, Star, ArrowRight, Package } from "lucide-react";
 
 export default function Index() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-16 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -24,10 +17,13 @@ export default function Index() {
             <span className="text-primary">in 30 minutes</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Premium toilet paper delivered to your door. 
-            From everyday essentials to luxury brands.
+            Premium toilet paper delivered to your door. From everyday
+            essentials to luxury brands.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 rounded-full font-semibold">
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-4 rounded-full font-semibold"
+          >
             Order now
           </Button>
         </div>
@@ -41,27 +37,35 @@ export default function Index() {
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                 <Clock className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">Fast delivery</h3>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Fast delivery
+              </h3>
               <p className="text-gray-600">
-                Get your toilet paper in 30 minutes or less with our network of local runners.
+                Get your toilet paper in 30 minutes or less with our network of
+                local runners.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                 <Package className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">Premium brands</h3>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Premium brands
+              </h3>
               <p className="text-gray-600">
-                Choose from Charmin, Cottonelle, Angel Soft and other trusted brands.
+                Choose from Charmin, Cottonelle, Angel Soft and other trusted
+                brands.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">Quality guaranteed</h3>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Quality guaranteed
+              </h3>
               <p className="text-gray-600">
                 100% satisfaction promise. Not happy? We'll make it right.
               </p>
@@ -81,36 +85,43 @@ export default function Index() {
               Get toilet paper delivered in three simple steps
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="bg-gray-50 rounded-2xl p-8 mb-6">
                 <div className="text-3xl font-bold text-primary mb-2">1</div>
                 <Package className="h-12 w-12 text-gray-400 mx-auto" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">Choose your products</h3>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Choose your products
+              </h3>
               <p className="text-gray-600">
-                Browse our selection of premium toilet paper brands and add to cart.
+                Browse our selection of premium toilet paper brands and add to
+                cart.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-gray-50 rounded-2xl p-8 mb-6">
                 <div className="text-3xl font-bold text-primary mb-2">2</div>
                 <Truck className="h-12 w-12 text-gray-400 mx-auto" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">We pick and pack</h3>
+              <h3 className="text-xl font-bold text-black mb-3">
+                We pick and pack
+              </h3>
               <p className="text-gray-600">
                 Our team carefully selects your items and prepares for delivery.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-gray-50 rounded-2xl p-8 mb-6">
                 <div className="text-3xl font-bold text-primary mb-2">3</div>
                 <Clock className="h-12 w-12 text-gray-400 mx-auto" />
               </div>
-              <h3 className="text-xl font-bold text-black mb-3">Delivered fast</h3>
+              <h3 className="text-xl font-bold text-black mb-3">
+                Delivered fast
+              </h3>
               <p className="text-gray-600">
                 Track your order and receive it at your door in 30 minutes.
               </p>
@@ -122,19 +133,25 @@ export default function Index() {
       {/* Popular Products */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-black mb-12 text-center">Popular products</h2>
+          <h2 className="text-3xl font-bold text-black mb-12 text-center">
+            Popular products
+          </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
             <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
                   <Package className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="font-bold text-black mb-1">Charmin Ultra Soft</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Charmin Ultra Soft
+                </h3>
                 <p className="text-sm text-gray-600 mb-3">12 mega rolls</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-bold text-black">$12.99</span>
-                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                  >
                     Add
                   </Button>
                 </div>
@@ -146,11 +163,16 @@ export default function Index() {
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
                   <Package className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="font-bold text-black mb-1">Cottonelle Clean Care</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Cottonelle Clean Care
+                </h3>
                 <p className="text-sm text-gray-600 mb-3">8 regular rolls</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-bold text-black">$8.99</span>
-                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                  >
                     Add
                   </Button>
                 </div>
@@ -162,11 +184,16 @@ export default function Index() {
                 <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
                   <Package className="h-8 w-8 text-gray-400" />
                 </div>
-                <h3 className="font-bold text-black mb-1">Angel Soft Mega Rolls</h3>
+                <h3 className="font-bold text-black mb-1">
+                  Angel Soft Mega Rolls
+                </h3>
                 <p className="text-sm text-gray-600 mb-3">6 mega rolls</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-bold text-black">$6.99</span>
-                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                  >
                     Add
                   </Button>
                 </div>
@@ -182,7 +209,10 @@ export default function Index() {
                 <p className="text-sm text-gray-600 mb-3">12 regular rolls</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-bold text-black">$9.99</span>
-                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                  >
                     Add
                   </Button>
                 </div>
@@ -199,9 +229,13 @@ export default function Index() {
             Never run out again
           </h2>
           <p className="text-xl text-gray-600 mb-10">
-            Join thousands who trust RollRush for reliable toilet paper delivery.
+            Join thousands who trust RollRush for reliable toilet paper
+            delivery.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-4 rounded-full font-semibold">
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-4 rounded-full font-semibold"
+          >
             Get started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -231,35 +265,120 @@ export default function Index() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 max-w-4xl mx-auto">
             <div className="space-y-4">
-              <a href="/city/new-york" className="block text-gray-600 hover:text-black text-sm">New York</a>
-              <a href="/city/houston" className="block text-gray-600 hover:text-black text-sm">Houston</a>
-              <a href="/city/san-francisco" className="block text-gray-600 hover:text-black text-sm">San Francisco</a>
-              <a href="/city/vancouver" className="block text-gray-600 hover:text-black text-sm">Vancouver, BC</a>
+              <a
+                href="/city/new-york"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                New York
+              </a>
+              <a
+                href="/city/houston"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Houston
+              </a>
+              <a
+                href="/city/san-francisco"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                San Francisco
+              </a>
+              <a
+                href="/city/vancouver"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Vancouver, BC
+              </a>
             </div>
             <div className="space-y-4">
-              <a href="/city/los-angeles" className="block text-gray-600 hover:text-black text-sm">Los Angeles</a>
-              <a href="/city/brooklyn" className="block text-gray-600 hover:text-black text-sm">Brooklyn</a>
-              <a href="/city/seattle" className="block text-gray-600 hover:text-black text-sm">Seattle</a>
-              <a href="/city/miami" className="block text-gray-600 hover:text-black text-sm">Miami</a>
+              <a
+                href="/city/los-angeles"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Los Angeles
+              </a>
+              <a
+                href="/city/brooklyn"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Brooklyn
+              </a>
+              <a
+                href="/city/seattle"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Seattle
+              </a>
+              <a
+                href="/city/miami"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Miami
+              </a>
             </div>
             <div className="space-y-4">
-              <a href="/city/toronto" className="block text-gray-600 hover:text-black text-sm">Toronto</a>
-              <a href="/city/san-diego" className="block text-gray-600 hover:text-black text-sm">San Diego</a>
-              <a href="/city/atlanta" className="block text-gray-600 hover:text-black text-sm">Atlanta</a>
-              <a href="/city/san-antonio" className="block text-gray-600 hover:text-black text-sm">San Antonio</a>
+              <a
+                href="/city/toronto"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Toronto
+              </a>
+              <a
+                href="/city/san-diego"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                San Diego
+              </a>
+              <a
+                href="/city/atlanta"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Atlanta
+              </a>
+              <a
+                href="/city/san-antonio"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                San Antonio
+              </a>
             </div>
             <div className="space-y-4">
-              <a href="/city/chicago" className="block text-gray-600 hover:text-black text-sm">Chicago</a>
-              <a href="/city/las-vegas" className="block text-gray-600 hover:text-black text-sm">Las Vegas</a>
-              <a href="/city/queens" className="block text-gray-600 hover:text-black text-sm">Queens</a>
+              <a
+                href="/city/chicago"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Chicago
+              </a>
+              <a
+                href="/city/las-vegas"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Las Vegas
+              </a>
+              <a
+                href="/city/queens"
+                className="block text-gray-600 hover:text-black text-sm"
+              >
+                Queens
+              </a>
             </div>
           </div>
 
           <div className="text-center mt-8">
             <button className="text-gray-600 hover:text-black font-medium text-sm flex items-center mx-auto">
               See more
-              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <svg
+                className="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
           </div>
@@ -279,29 +398,66 @@ export default function Index() {
             <div>
               <h4 className="font-semibold text-black mb-4">Company</h4>
               <ul className="space-y-3 text-sm">
-                <li><a href="/about" className="text-gray-600 hover:text-black">About</a></li>
-                <li><a href="/how-it-works" className="text-gray-600 hover:text-black">How it works</a></li>
-                <li><a href="/careers" className="text-gray-600 hover:text-black">Careers</a></li>
+                <li>
+                  <a href="/about" className="text-gray-600 hover:text-black">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/how-it-works"
+                    className="text-gray-600 hover:text-black"
+                  >
+                    How it works
+                  </a>
+                </li>
+                <li>
+                  <a href="/careers" className="text-gray-600 hover:text-black">
+                    Careers
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-black mb-4">Support</h4>
               <ul className="space-y-3 text-sm">
-                <li><a href="/help" className="text-gray-600 hover:text-black">Help Center</a></li>
-                <li><a href="/contact" className="text-gray-600 hover:text-black">Contact</a></li>
-                <li><a href="/track" className="text-gray-600 hover:text-black">Track Order</a></li>
+                <li>
+                  <a href="/help" className="text-gray-600 hover:text-black">
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="text-gray-600 hover:text-black">
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="/track" className="text-gray-600 hover:text-black">
+                    Track Order
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-black mb-4">Legal</h4>
               <ul className="space-y-3 text-sm">
-                <li><a href="/privacy" className="text-gray-600 hover:text-black">Privacy</a></li>
-                <li><a href="/terms" className="text-gray-600 hover:text-black">Terms</a></li>
+                <li>
+                  <a href="/privacy" className="text-gray-600 hover:text-black">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="text-gray-600 hover:text-black">
+                    Terms
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-200 pt-8 text-center">
-            <p className="text-sm text-gray-500">&copy; 2024 RollRush. All rights reserved.</p>
+            <p className="text-sm text-gray-500">
+              &copy; 2024 RollRush. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

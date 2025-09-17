@@ -15,17 +15,26 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/how-it-works" className="text-gray-700 hover:text-black font-medium">
+            <a
+              href="/how-it-works"
+              className="text-gray-700 hover:text-black font-medium"
+            >
               How it works
             </a>
-            <a href="/about" className="text-gray-700 hover:text-black font-medium">
+            <a
+              href="/about"
+              className="text-gray-700 hover:text-black font-medium"
+            >
               About
             </a>
           </nav>
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-3">
-            <Button variant="ghost" className="hidden lg:flex text-gray-700 hover:text-black font-medium">
+            <Button
+              variant="ghost"
+              className="hidden lg:flex text-gray-700 hover:text-black font-medium"
+            >
               <User className="h-4 w-4 mr-2" />
               Sign in
             </Button>
