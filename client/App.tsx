@@ -28,8 +28,8 @@ const App = () => (
             path="/about"
             element={
               <Placeholder
-                title="About RollRush"
-                description="Learn more about our mission to never let you run out of toilet paper again."
+                title="About SushiRush"
+                description="Learn more about our mission to deliver fresh, authentic sushi in 30 minutes."
               />
             }
           />
@@ -38,7 +38,7 @@ const App = () => (
             element={
               <Placeholder
                 title="Careers"
-                description="Join the RollRush team and help deliver essential supplies to people in need."
+                description="Join the SushiRush team and help deliver fresh sushi to people in your city."
               />
             }
           />
