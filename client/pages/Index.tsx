@@ -208,6 +208,64 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Get more from your neighborhood */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-black mb-12 text-center">
+            Get more from your neighborhood
+          </h2>
+
+          <div className="border-b border-gray-200 mb-8">
+            <nav className="flex space-x-8 justify-center">
+              <button className="border-b-2 border-black pb-4 text-black font-medium">
+                Top Cities
+              </button>
+              <button className="border-b-2 border-transparent pb-4 text-gray-500 font-medium hover:text-gray-700">
+                Top Brands
+              </button>
+              <button className="border-b-2 border-transparent pb-4 text-gray-500 font-medium hover:text-gray-700">
+                Top Categories
+              </button>
+            </nav>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 max-w-4xl mx-auto">
+            <div className="space-y-4">
+              <a href="/city/new-york" className="block text-gray-600 hover:text-black text-sm">New York</a>
+              <a href="/city/houston" className="block text-gray-600 hover:text-black text-sm">Houston</a>
+              <a href="/city/san-francisco" className="block text-gray-600 hover:text-black text-sm">San Francisco</a>
+              <a href="/city/vancouver" className="block text-gray-600 hover:text-black text-sm">Vancouver, BC</a>
+            </div>
+            <div className="space-y-4">
+              <a href="/city/los-angeles" className="block text-gray-600 hover:text-black text-sm">Los Angeles</a>
+              <a href="/city/brooklyn" className="block text-gray-600 hover:text-black text-sm">Brooklyn</a>
+              <a href="/city/seattle" className="block text-gray-600 hover:text-black text-sm">Seattle</a>
+              <a href="/city/miami" className="block text-gray-600 hover:text-black text-sm">Miami</a>
+            </div>
+            <div className="space-y-4">
+              <a href="/city/toronto" className="block text-gray-600 hover:text-black text-sm">Toronto</a>
+              <a href="/city/san-diego" className="block text-gray-600 hover:text-black text-sm">San Diego</a>
+              <a href="/city/atlanta" className="block text-gray-600 hover:text-black text-sm">Atlanta</a>
+              <a href="/city/san-antonio" className="block text-gray-600 hover:text-black text-sm">San Antonio</a>
+            </div>
+            <div className="space-y-4">
+              <a href="/city/chicago" className="block text-gray-600 hover:text-black text-sm">Chicago</a>
+              <a href="/city/las-vegas" className="block text-gray-600 hover:text-black text-sm">Las Vegas</a>
+              <a href="/city/queens" className="block text-gray-600 hover:text-black text-sm">Queens</a>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <button className="text-gray-600 hover:text-black font-medium text-sm flex items-center mx-auto">
+              See more
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
