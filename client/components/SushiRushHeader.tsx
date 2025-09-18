@@ -9,6 +9,11 @@ interface SushiRushHeaderProps {
 }
 
 export default function SushiRushHeader({ searchQuery = "", onSearchChange, cartCount = 0 }: SushiRushHeaderProps) {
+  const { userLocation, refreshLocation, isLoadingLocation } = useLocation();
+
+  // Format coordinates for display (simplified for demo)
+  const locationDisplay = `${userLocation.lat.toFixed(3)}, ${userLocation.lng.toFixed(3)}`;
+
   return (
     <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[400]">
       <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200 px-6">
