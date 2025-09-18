@@ -244,13 +244,12 @@ export const menuData: MenuItemType[] = [
 ];
 
 export const menuCategories = [
-  "Sushi Rolls",
-  "Nigiri", 
+  "Nigiri",
   "Sashimi",
   "Bento Boxes",
   "Tempura",
   "Appetizers",
-  "Salads", 
+  "Salads",
   "Ramen",
   "Desserts",
   "Beverages"
