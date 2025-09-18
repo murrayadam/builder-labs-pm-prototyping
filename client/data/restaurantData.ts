@@ -72,7 +72,8 @@ export const mockRestaurants: Restaurant[] = [
     deliveryTime: "25-35 min",
     deliveryFee: "$0 delivery fee",
     image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
-    categories: ["bento-boxes", "tempura", "salads"]
+    categories: ["bento-boxes", "tempura", "salads"],
+    featured: true
   },
   {
     id: "6",
@@ -133,6 +134,54 @@ export const mockRestaurants: Restaurant[] = [
     deliveryFee: "$0 delivery fee",
     image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop",
     categories: ["desserts", "beverages"]
+  },
+  {
+    id: "11",
+    name: "Nigiri Ninja",
+    description: "Master crafted nigiri with premium fish",
+    rating: 4.9,
+    reviewCount: "180+",
+    distance: "1.1 mi",
+    deliveryTime: "30-40 min",
+    deliveryFee: "$0 delivery fee",
+    image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
+    categories: ["nigiri", "sashimi"]
+  },
+  {
+    id: "12",
+    name: "Miso Hungry",
+    description: "Comfort ramen and traditional Japanese soups",
+    rating: 4.6,
+    reviewCount: "380+",
+    distance: "0.9 mi",
+    deliveryTime: "20-30 min",
+    deliveryFee: "$0 delivery fee",
+    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
+    categories: ["ramen", "appetizers"]
+  },
+  {
+    id: "13",
+    name: "Tokyo Salad Bar",
+    description: "Fresh Japanese-inspired salads and healthy options",
+    rating: 4.4,
+    reviewCount: "220+",
+    distance: "1.3 mi",
+    deliveryTime: "25-35 min",
+    deliveryFee: "$0 delivery fee",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+    categories: ["salads", "bento-boxes"]
+  },
+  {
+    id: "14",
+    name: "Green Tea & Co",
+    description: "Premium teas and Japanese beverages",
+    rating: 4.7,
+    reviewCount: "95+",
+    distance: "1.8 mi",
+    deliveryTime: "40-50 min",
+    deliveryFee: "$0 delivery fee",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    categories: ["beverages", "desserts"]
   }
 ];
 
