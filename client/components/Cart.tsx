@@ -19,7 +19,7 @@ export default function Cart({ items, quantities, onQuantityChange }: CartProps)
 
   if (cartItems.length === 0) {
     return (
-      <Card className="border-none shadow-sm sticky top-64">
+      <Card className="border-none shadow-sm sticky top-48">
         <CardContent className="p-6">
           <h3 className="text-xl font-bold text-black mb-4">Your Order</h3>
           <div className="text-center py-8 text-gray-500">

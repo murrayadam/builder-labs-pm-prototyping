@@ -18,7 +18,7 @@ const filterOptions = [
 
 export default function MenuFilters({ activeFilters, onFilterToggle }: MenuFiltersProps) {
   return (
-    <div className="bg-white border-b border-gray-200 sticky top-48 z-[250] py-4">
+    <div className="bg-white border-b border-gray-200 sticky top-32 z-[250] py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Filters */}
         <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide">
