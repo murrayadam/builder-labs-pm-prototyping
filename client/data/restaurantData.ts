@@ -10,6 +10,10 @@ export interface Restaurant {
   image: string;
   categories: string[];
   featured?: boolean;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
 }
 
 export const mockRestaurants: Restaurant[] = [
