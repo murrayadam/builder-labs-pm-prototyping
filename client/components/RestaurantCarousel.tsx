@@ -28,7 +28,7 @@ export default function RestaurantCarousel({ restaurants, title, categoryId }: R
   if (restaurants.length === 0) return null;
 
   return (
-    <div className="mb-8">
+    <div id={categoryId} className="mb-8">
       <div className="flex items-center justify-between mb-4 px-8">
         <div className="flex items-center flex-1">
           <h2 className="text-xl font-bold text-gray-900 cursor-pointer hover:text-blue-600">
