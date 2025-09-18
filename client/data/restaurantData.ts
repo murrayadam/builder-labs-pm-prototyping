@@ -44,6 +44,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&h=300&fit=crop",
     categories: ["sushi-rolls", "tempura", "appetizers"],
+    coordinates: { lat: 37.7849, lng: -122.4094 },
   },
   {
     id: "3",
@@ -57,6 +58,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&h=300&fit=crop",
     categories: ["nigiri", "sashimi", "bento-boxes"],
+    coordinates: { lat: 37.7649, lng: -122.4294 },
   },
   {
     id: "4",
@@ -70,6 +72,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&h=300&fit=crop",
     categories: ["sushi-rolls", "tempura", "ramen"],
+    coordinates: { lat: 37.7799, lng: -122.4094 },
   },
   {
     id: "5",
@@ -84,6 +87,7 @@ export const mockRestaurants: Restaurant[] = [
       "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
     categories: ["bento-boxes", "tempura", "salads"],
     featured: true,
+    coordinates: { lat: 37.7699, lng: -122.4144 },
   },
   {
     id: "6",
@@ -97,6 +101,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
     categories: ["sushi-rolls", "appetizers", "beverages"],
+    coordinates: { lat: 37.7809, lng: -122.4144 },
   },
   {
     id: "7",
@@ -110,6 +115,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
     categories: ["sushi-rolls", "sashimi", "appetizers"],
+    coordinates: { lat: 37.7649, lng: -122.4044 },
   },
   {
     id: "8",
@@ -123,6 +129,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
     categories: ["ramen", "sushi-rolls", "appetizers"],
+    coordinates: { lat: 37.7719, lng: -122.4244 },
   },
   {
     id: "9",
@@ -136,6 +143,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
     categories: ["tempura", "bento-boxes", "salads"],
+    coordinates: { lat: 37.7599, lng: -122.4344 },
   },
   {
     id: "10",
@@ -149,6 +157,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop",
     categories: ["desserts", "beverages"],
+    coordinates: { lat: 37.7569, lng: -122.4394 },
   },
   {
     id: "11",
@@ -162,6 +171,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
     categories: ["nigiri", "sashimi"],
+    coordinates: { lat: 37.7889, lng: -122.4144 },
   },
   {
     id: "12",
@@ -175,6 +185,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
     categories: ["ramen", "appetizers"],
+    coordinates: { lat: 37.7779, lng: -122.4244 },
   },
   {
     id: "13",
@@ -188,6 +199,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
     categories: ["salads", "bento-boxes"],
+    coordinates: { lat: 37.7619, lng: -122.4044 },
   },
   {
     id: "14",
@@ -201,6 +213,7 @@ export const mockRestaurants: Restaurant[] = [
     image:
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
     categories: ["beverages", "desserts"],
+    coordinates: { lat: 37.7529, lng: -122.4444 },
   },
 ];
 
