@@ -1,65 +1,6 @@
 import { MenuItemType } from "@/components/MenuItem";
 
 export const menuData: MenuItemType[] = [
-  // Sushi Rolls
-  {
-    id: "california-roll",
-    name: "California Roll",
-    description: "Crab, avocado, cucumber with sesame seeds",
-    price: 12.99,
-    image: "/api/placeholder/80/80",
-    category: "Sushi Rolls",
-    tags: ["cooked"],
-    popular: true,
-  },
-  {
-    id: "spicy-tuna-roll",
-    name: "Spicy Tuna Roll",
-    description: "Spicy tuna mix, cucumber, topped with sriracha",
-    price: 13.99,
-    image: "/api/placeholder/80/80",
-    category: "Sushi Rolls",
-    tags: ["spicy", "raw"],
-    trending: true,
-  },
-  {
-    id: "salmon-avocado-roll",
-    name: "Salmon Avocado Roll",
-    description: "Fresh salmon, avocado, cucumber with spicy mayo",
-    price: 15.99,
-    image: "/api/placeholder/80/80",
-    category: "Sushi Rolls",
-    tags: ["raw"],
-  },
-  {
-    id: "rainbow-roll",
-    name: "Rainbow Roll",
-    description: "California roll topped with assorted fish and avocado",
-    price: 18.99,
-    image: "/api/placeholder/80/80",
-    category: "Sushi Rolls",
-    tags: ["raw", "cooked"],
-    popular: true,
-  },
-  {
-    id: "dragon-roll",
-    name: "Dragon Roll",
-    description: "Eel, cucumber, topped with avocado and eel sauce",
-    price: 16.99,
-    image: "/api/placeholder/80/80",
-    category: "Sushi Rolls",
-    tags: ["cooked"],
-  },
-  {
-    id: "veggie-roll",
-    name: "Vegetarian Roll",
-    description: "Cucumber, avocado, carrot, sprouts with sesame",
-    price: 9.99,
-    image: "/api/placeholder/80/80",
-    category: "Sushi Rolls",
-    tags: ["vegetarian", "cooked"],
-  },
-
   // Nigiri
   {
     id: "salmon-nigiri",
