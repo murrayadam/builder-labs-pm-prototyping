@@ -1,67 +1,6 @@
 import { MenuItemType } from "@/components/MenuItem";
 
 export const menuData: MenuItemType[] = [
-  // Sashimi
-  {
-    id: "salmon-sashimi",
-    name: "Salmon Sashimi",
-    description: "6 pieces of fresh Atlantic salmon, no rice",
-    price: 14.99,
-    image: "/api/placeholder/80/80",
-    category: "Sashimi",
-    tags: ["raw", "gluten-free"],
-  },
-  {
-    id: "tuna-sashimi",
-    name: "Tuna Sashimi",
-    description: "6 pieces of premium bluefin tuna, no rice",
-    price: 18.99,
-    image: "/api/placeholder/80/80",
-    category: "Sashimi",
-    tags: ["raw", "gluten-free"],
-    trending: true,
-  },
-  {
-    id: "mixed-sashimi",
-    name: "Chef's Sashimi Selection",
-    description: "9 pieces of chef's choice premium fish",
-    price: 24.99,
-    image: "/api/placeholder/80/80",
-    category: "Sashimi",
-    tags: ["raw", "gluten-free"],
-    popular: true,
-  },
-
-  // Bento Boxes
-  {
-    id: "teriyaki-chicken-bento",
-    name: "Teriyaki Chicken Bento",
-    description: "Grilled chicken, rice, salad, miso soup, and 3 pieces California roll",
-    price: 16.99,
-    image: "/api/placeholder/80/80",
-    category: "Bento Boxes",
-    tags: ["cooked"],
-  },
-  {
-    id: "salmon-teriyaki-bento",
-    name: "Salmon Teriyaki Bento",
-    description: "Grilled salmon, rice, salad, miso soup, and 3 pieces salmon roll",
-    price: 18.99,
-    image: "/api/placeholder/80/80",
-    category: "Bento Boxes",
-    tags: ["cooked"],
-    popular: true,
-  },
-  {
-    id: "vegetarian-bento",
-    name: "Vegetarian Bento",
-    description: "Tofu teriyaki, rice, salad, miso soup, and veggie roll",
-    price: 14.99,
-    image: "/api/placeholder/80/80",
-    category: "Bento Boxes",
-    tags: ["vegetarian", "cooked"],
-  },
-
   // Tempura
   {
     id: "shrimp-tempura",
