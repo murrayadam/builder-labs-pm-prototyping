@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
 import SushiRushHeader from "@/components/SushiRushHeader";
 import CategorySection from "@/components/CategorySection";
-import MenuCategory from "@/components/MenuCategory";
-import { menuData, menuCategories } from "@/data/menuData";
+import RestaurantCarousel from "@/components/RestaurantCarousel";
+import { mockRestaurants, categoryLabels } from "@/data/restaurantData";
 
 export default function Order() {
   const [searchQuery, setSearchQuery] = useState("");
