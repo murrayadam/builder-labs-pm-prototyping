@@ -1,45 +1,6 @@
 import { MenuItemType } from "@/components/MenuItem";
 
 export const menuData: MenuItemType[] = [
-  // Nigiri
-  {
-    id: "salmon-nigiri",
-    name: "Salmon Nigiri",
-    description: "Fresh Atlantic salmon over seasoned rice",
-    price: 3.99,
-    image: "/api/placeholder/80/80",
-    category: "Nigiri",
-    tags: ["raw", "gluten-free"],
-    popular: true,
-  },
-  {
-    id: "tuna-nigiri",
-    name: "Tuna Nigiri",
-    description: "Premium bluefin tuna over seasoned rice",
-    price: 4.99,
-    image: "/api/placeholder/80/80",
-    category: "Nigiri",
-    tags: ["raw", "gluten-free"],
-  },
-  {
-    id: "yellowtail-nigiri",
-    name: "Yellowtail Nigiri",
-    description: "Buttery yellowtail over seasoned rice",
-    price: 4.49,
-    image: "/api/placeholder/80/80",
-    category: "Nigiri",
-    tags: ["raw", "gluten-free"],
-  },
-  {
-    id: "eel-nigiri",
-    name: "Eel Nigiri",
-    description: "Grilled eel with sweet sauce over rice",
-    price: 4.99,
-    image: "/api/placeholder/80/80",
-    category: "Nigiri",
-    tags: ["cooked", "gluten-free"],
-  },
-
   // Sashimi
   {
     id: "salmon-sashimi",
