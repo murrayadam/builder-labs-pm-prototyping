@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Restaurant } from "@/data/restaurantData";
 
 interface RestaurantCardProps {
