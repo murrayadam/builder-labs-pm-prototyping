@@ -22,14 +22,12 @@ export default function Order() {
     }
   };
 
-  const totalCartItems = Object.values(quantities).reduce((sum, qty) => sum + qty, 0);
-
   return (
     <div className="min-h-screen bg-gray-50">
       <SushiRushHeader
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
-        cartCount={totalCartItems}
+        cartCount={0}
       />
       <CategorySection onCategoryClick={handleCategoryClick} />
 
