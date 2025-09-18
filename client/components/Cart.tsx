@@ -33,7 +33,7 @@ export default function Cart({ items, quantities, onQuantityChange }: CartProps)
   }
 
   return (
-    <Card className="border-none shadow-sm sticky top-48">
+    <Card className="border-none shadow-sm sticky top-52">
       <CardContent className="p-6">
         <h3 className="text-xl font-bold text-black mb-4">Your Order</h3>
         
