@@ -10,7 +10,7 @@ interface RestaurantCarouselProps {
   categoryId?: string;
 }
 
-export default function RestaurantCarousel({ restaurants, title }: RestaurantCarouselProps) {
+export default function RestaurantCarousel({ restaurants, title, categoryId }: RestaurantCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
