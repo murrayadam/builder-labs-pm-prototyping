@@ -114,7 +114,7 @@ export default function RestaurantView({
 
       {/* Content */}
       {viewMode === "map" ? (
-        <div className="h-96 rounded-lg overflow-hidden border">
+        <div className="h-96 rounded-lg overflow-hidden border relative z-[200]">
           <MapView
             restaurants={availableRestaurants}
             onRestaurantSelect={handleRestaurantSelect}
