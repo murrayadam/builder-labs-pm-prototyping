@@ -1,66 +1,6 @@
 import { MenuItemType } from "@/components/MenuItem";
 
 export const menuData: MenuItemType[] = [
-  // Tempura
-  {
-    id: "shrimp-tempura",
-    name: "Shrimp Tempura",
-    description: "6 pieces of crispy fried shrimp with tempura sauce",
-    price: 12.99,
-    image: "/api/placeholder/80/80",
-    category: "Tempura",
-    tags: ["cooked"],
-  },
-  {
-    id: "vegetable-tempura",
-    name: "Vegetable Tempura",
-    description: "Mixed seasonal vegetables in crispy tempura batter",
-    price: 9.99,
-    image: "/api/placeholder/80/80",
-    category: "Tempura",
-    tags: ["vegetarian", "cooked"],
-  },
-  {
-    id: "soft-shell-crab-tempura",
-    name: "Soft Shell Crab Tempura",
-    description: "Whole soft shell crab in tempura batter",
-    price: 15.99,
-    image: "/api/placeholder/80/80",
-    category: "Tempura",
-    tags: ["cooked"],
-    trending: true,
-  },
-
-  // Appetizers
-  {
-    id: "gyoza",
-    name: "Pork Gyoza",
-    description: "6 pan-fried dumplings with ponzu dipping sauce",
-    price: 8.99,
-    image: "/api/placeholder/80/80",
-    category: "Appetizers",
-    tags: ["cooked"],
-    popular: true,
-  },
-  {
-    id: "edamame",
-    name: "Edamame",
-    description: "Steamed soybeans with sea salt",
-    price: 5.99,
-    image: "/api/placeholder/80/80",
-    category: "Appetizers",
-    tags: ["vegetarian", "cooked", "gluten-free"],
-  },
-  {
-    id: "agedashi-tofu",
-    name: "Agedashi Tofu",
-    description: "Lightly fried tofu in savory dashi broth",
-    price: 7.99,
-    image: "/api/placeholder/80/80",
-    category: "Appetizers",
-    tags: ["vegetarian", "cooked"],
-  },
-
   // Salads
   {
     id: "seaweed-salad",
