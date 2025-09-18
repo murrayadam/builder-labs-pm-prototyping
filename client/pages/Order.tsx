@@ -44,38 +44,26 @@ export default function Order() {
 
       <main className="pt-2 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                {menuCategories.map(category => {
-                  const categoryItems = filteredItems.filter(item => item.category === category);
-                  return (
-                    <MenuCategory
-                      key={category}
-                      title={category}
-                      items={categoryItems}
-                      quantities={quantities}
-                      onQuantityChange={handleQuantityChange}
-                    />
-                  );
-                })}
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            {menuCategories.map(category => {
+              const categoryItems = filteredItems.filter(item => item.category === category);
+              return (
+                <MenuCategory
+                  key={category}
+                  title={category}
+                  items={categoryItems}
+                  quantities={quantities}
+                  onQuantityChange={handleQuantityChange}
+                />
+              );
+            })}
 
-                {filteredItems.length === 0 && (
-                  <div className="text-center py-12 text-gray-500">
-                    <p className="text-lg font-medium">No items found</p>
-                    <p className="text-sm">Try adjusting your search or filters</p>
-                  </div>
-                )}
+            {filteredItems.length === 0 && (
+              <div className="text-center py-12 text-gray-500">
+                <p className="text-lg font-medium">No items found</p>
+                <p className="text-sm">Try adjusting your search or filters</p>
               </div>
-            </div>
-
-            <div className="lg:col-span-1">
-              <Cart
-                items={menuData}
-                quantities={quantities}
-                onQuantityChange={handleQuantityChange}
-              />
-            </div>
+            )}
           </div>
         </div>
       </main>
