@@ -7,6 +7,7 @@ import { useRef } from "react";
 interface RestaurantCarouselProps {
   restaurants: Restaurant[];
   title: string;
+  categoryId?: string;
 }
 
 export default function RestaurantCarousel({ restaurants, title }: RestaurantCarouselProps) {
