@@ -8,17 +8,19 @@ export default function Order() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredRestaurants = useMemo(() => {
-    return mockRestaurants.filter(restaurant => {
+    return mockRestaurants.filter((restaurant) => {
       // Search filter only
-      return restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             restaurant.description.toLowerCase().includes(searchQuery.toLowerCase());
+      return (
+        restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        restaurant.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
     });
   }, [searchQuery]);
 
   const handleCategoryClick = (categoryId: string) => {
     const element = document.getElementById(categoryId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -34,22 +36,24 @@ export default function Order() {
       <main className="pt-2 pb-12">
         <div className="max-w-full mx-auto">
           <div className="bg-white">
-            {Object.entries(categoryLabels).map(([categoryId, categoryLabel]) => {
-              const categoryRestaurants = filteredRestaurants.filter(restaurant =>
-                restaurant.categories.includes(categoryId)
-              );
+            {Object.entries(categoryLabels).map(
+              ([categoryId, categoryLabel]) => {
+                const categoryRestaurants = filteredRestaurants.filter(
+                  (restaurant) => restaurant.categories.includes(categoryId),
+                );
 
-              if (categoryRestaurants.length === 0) return null;
+                if (categoryRestaurants.length === 0) return null;
 
-              return (
-                <RestaurantCarousel
-                  key={categoryId}
-                  title={categoryLabel}
-                  restaurants={categoryRestaurants}
-                  categoryId={categoryId}
-                />
-              );
-            })}
+                return (
+                  <RestaurantCarousel
+                    key={categoryId}
+                    title={categoryLabel}
+                    restaurants={categoryRestaurants}
+                    categoryId={categoryId}
+                  />
+                );
+              },
+            )}
 
             {filteredRestaurants.length === 0 && (
               <div className="text-center py-12 text-gray-500">

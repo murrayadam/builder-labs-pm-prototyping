@@ -8,7 +8,10 @@ interface RestaurantCardProps {
 
 export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
   return (
-    <Link to={`/restaurant/${restaurant.id}`} className="flex-shrink-0 w-60 mb-4 relative cursor-pointer hover:transform hover:scale-105 transition-transform block">
+    <Link
+      to={`/restaurant/${restaurant.id}`}
+      className="flex-shrink-0 w-60 mb-4 relative cursor-pointer hover:transform hover:scale-105 transition-transform block"
+    >
       <div className="relative">
         <div className="relative rounded-xl overflow-hidden h-44 bg-gray-100">
           <img
@@ -17,9 +20,14 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
             className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-              target.parentElement!.classList.add('flex', 'items-center', 'justify-center');
-              target.parentElement!.innerHTML = '<div class="text-4xl">🍣</div>';
+              target.style.display = "none";
+              target.parentElement!.classList.add(
+                "flex",
+                "items-center",
+                "justify-center",
+              );
+              target.parentElement!.innerHTML =
+                '<div class="text-4xl">🍣</div>';
             }}
           />
           {restaurant.featured && (
@@ -38,7 +46,9 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
 
           <div className="flex items-center gap-1 mb-1 text-sm text-gray-600">
             <div className="flex items-center">
-              <span className="font-bold text-gray-900">{restaurant.rating}</span>
+              <span className="font-bold text-gray-900">
+                {restaurant.rating}
+              </span>
               <Star className="w-3 h-3 ml-1 fill-yellow-400 text-yellow-400" />
               <span className="ml-1">({restaurant.reviewCount})</span>
             </div>

@@ -22,9 +22,10 @@ export const mockRestaurants: Restaurant[] = [
     distance: "0.8 mi",
     deliveryTime: "25-35 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
     categories: ["sushi-rolls", "nigiri", "sashimi"],
-    featured: true
+    featured: true,
   },
   {
     id: "2",
@@ -35,8 +36,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.2 mi",
     deliveryTime: "30-40 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&h=300&fit=crop",
-    categories: ["sushi-rolls", "tempura", "appetizers"]
+    image:
+      "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&h=300&fit=crop",
+    categories: ["sushi-rolls", "tempura", "appetizers"],
   },
   {
     id: "3",
@@ -47,8 +49,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.5 mi",
     deliveryTime: "35-45 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&h=300&fit=crop",
-    categories: ["nigiri", "sashimi", "bento-boxes"]
+    image:
+      "https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&h=300&fit=crop",
+    categories: ["nigiri", "sashimi", "bento-boxes"],
   },
   {
     id: "4",
@@ -59,8 +62,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "0.9 mi",
     deliveryTime: "20-30 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&h=300&fit=crop",
-    categories: ["sushi-rolls", "tempura", "ramen"]
+    image:
+      "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&h=300&fit=crop",
+    categories: ["sushi-rolls", "tempura", "ramen"],
   },
   {
     id: "5",
@@ -71,9 +75,10 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.1 mi",
     deliveryTime: "25-35 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&h=300&fit=crop",
     categories: ["bento-boxes", "tempura", "salads"],
-    featured: true
+    featured: true,
   },
   {
     id: "6",
@@ -84,8 +89,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "0.7 mi",
     deliveryTime: "15-25 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-    categories: ["sushi-rolls", "appetizers", "beverages"]
+    image:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    categories: ["sushi-rolls", "appetizers", "beverages"],
   },
   {
     id: "7",
@@ -96,8 +102,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.3 mi",
     deliveryTime: "30-40 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
-    categories: ["sushi-rolls", "sashimi", "appetizers"]
+    image:
+      "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
+    categories: ["sushi-rolls", "sashimi", "appetizers"],
   },
   {
     id: "8",
@@ -108,8 +115,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.0 mi",
     deliveryTime: "25-35 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
-    categories: ["ramen", "sushi-rolls", "appetizers"]
+    image:
+      "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
+    categories: ["ramen", "sushi-rolls", "appetizers"],
   },
   {
     id: "9",
@@ -120,8 +128,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.4 mi",
     deliveryTime: "30-40 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
-    categories: ["tempura", "bento-boxes", "salads"]
+    image:
+      "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop",
+    categories: ["tempura", "bento-boxes", "salads"],
   },
   {
     id: "10",
@@ -132,8 +141,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.6 mi",
     deliveryTime: "35-45 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop",
-    categories: ["desserts", "beverages"]
+    image:
+      "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop",
+    categories: ["desserts", "beverages"],
   },
   {
     id: "11",
@@ -144,8 +154,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.1 mi",
     deliveryTime: "30-40 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
-    categories: ["nigiri", "sashimi"]
+    image:
+      "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
+    categories: ["nigiri", "sashimi"],
   },
   {
     id: "12",
@@ -156,8 +167,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "0.9 mi",
     deliveryTime: "20-30 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
-    categories: ["ramen", "appetizers"]
+    image:
+      "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop",
+    categories: ["ramen", "appetizers"],
   },
   {
     id: "13",
@@ -168,8 +180,9 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.3 mi",
     deliveryTime: "25-35 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
-    categories: ["salads", "bento-boxes"]
+    image:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
+    categories: ["salads", "bento-boxes"],
   },
   {
     id: "14",
@@ -180,20 +193,21 @@ export const mockRestaurants: Restaurant[] = [
     distance: "1.8 mi",
     deliveryTime: "40-50 min",
     deliveryFee: "$0 delivery fee",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-    categories: ["beverages", "desserts"]
-  }
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    categories: ["beverages", "desserts"],
+  },
 ];
 
 export const categoryLabels: Record<string, string> = {
   "sushi-rolls": "Sushi Rolls",
-  "nigiri": "Nigiri",
-  "sashimi": "Sashimi", 
+  nigiri: "Nigiri",
+  sashimi: "Sashimi",
   "bento-boxes": "Bento Boxes",
-  "tempura": "Tempura",
-  "appetizers": "Appetizers",
-  "salads": "Salads",
-  "ramen": "Ramen",
-  "desserts": "Desserts",
-  "beverages": "Beverages"
+  tempura: "Tempura",
+  appetizers: "Appetizers",
+  salads: "Salads",
+  ramen: "Ramen",
+  desserts: "Desserts",
+  beverages: "Beverages",
 };

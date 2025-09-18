@@ -10,18 +10,22 @@ interface RestaurantCarouselProps {
   categoryId?: string;
 }
 
-export default function RestaurantCarousel({ restaurants, title, categoryId }: RestaurantCarouselProps) {
+export default function RestaurantCarousel({
+  restaurants,
+  title,
+  categoryId,
+}: RestaurantCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
     }
   };
 
@@ -63,10 +67,10 @@ export default function RestaurantCarousel({ restaurants, title, categoryId }: R
         </div>
       </div>
 
-      <div 
+      <div
         ref={scrollContainerRef}
         className="flex gap-4 overflow-x-auto scrollbar-hide px-8 scroll-smooth"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {restaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.id} restaurant={restaurant} />

@@ -10,9 +10,16 @@ interface CartProps {
   onQuantityChange: (itemId: string, newQuantity: number) => void;
 }
 
-export default function Cart({ items, quantities, onQuantityChange }: CartProps) {
-  const cartItems = items.filter(item => quantities[item.id] > 0);
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * quantities[item.id]), 0);
+export default function Cart({
+  items,
+  quantities,
+  onQuantityChange,
+}: CartProps) {
+  const cartItems = items.filter((item) => quantities[item.id] > 0);
+  const subtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * quantities[item.id],
+    0,
+  );
   const deliveryFee = 1.99;
   const tax = subtotal * 0.0875; // 8.75% tax
   const total = subtotal + deliveryFee + tax;
@@ -36,28 +43,36 @@ export default function Cart({ items, quantities, onQuantityChange }: CartProps)
     <Card className="border-none shadow-sm sticky top-36">
       <CardContent className="p-6">
         <h3 className="text-xl font-bold text-black mb-4">Your Order</h3>
-        
+
         <div className="space-y-3 mb-4">
           {cartItems.map((item) => (
             <div key={item.id} className="flex items-center gap-3">
               <div className="flex-grow">
                 <h4 className="font-medium text-black text-sm">{item.name}</h4>
-                <p className="text-sm text-gray-600">${item.price.toFixed(2)} each</p>
+                <p className="text-sm text-gray-600">
+                  ${item.price.toFixed(2)} each
+                </p>
               </div>
               <div className="flex items-center gap-2">
                 <Button
                   size="sm"
                   variant="outline"
                   className="w-6 h-6 p-0"
-                  onClick={() => onQuantityChange(item.id, quantities[item.id] - 1)}
+                  onClick={() =>
+                    onQuantityChange(item.id, quantities[item.id] - 1)
+                  }
                 >
                   <Minus className="h-3 w-3" />
                 </Button>
-                <span className="text-sm font-medium w-6 text-center">{quantities[item.id]}</span>
+                <span className="text-sm font-medium w-6 text-center">
+                  {quantities[item.id]}
+                </span>
                 <Button
                   size="sm"
                   className="w-6 h-6 p-0 bg-red-600 hover:bg-red-700"
-                  onClick={() => onQuantityChange(item.id, quantities[item.id] + 1)}
+                  onClick={() =>
+                    onQuantityChange(item.id, quantities[item.id] + 1)
+                  }
                 >
                   <Plus className="h-3 w-3" />
                 </Button>
