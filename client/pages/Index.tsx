@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { Clock, Shield, Truck, Star, ArrowRight, Package, Fish } from "lucide-react";
+import {
+  Clock,
+  Shield,
+  Truck,
+  Star,
+  ArrowRight,
+  Package,
+  Fish,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { restaurantMenus } from "@/data/menuItemData";
 
@@ -19,8 +27,8 @@ export default function Index() {
             <span className="text-primary">in 30 minutes</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Fresh, authentic sushi delivered to your door. From classic
-            rolls to premium sashimi.
+            Fresh, authentic sushi delivered to your door. From classic rolls to
+            premium sashimi.
           </p>
           <Button
             asChild
@@ -44,8 +52,8 @@ export default function Index() {
                 Fast delivery
               </h3>
               <p className="text-gray-600">
-                Get fresh sushi in 30 minutes or less with our network of
-                local delivery partners.
+                Get fresh sushi in 30 minutes or less with our network of local
+                delivery partners.
               </p>
             </div>
 
@@ -99,8 +107,8 @@ export default function Index() {
                 Choose your sushi
               </h3>
               <p className="text-gray-600">
-                Browse our selection of fresh sushi rolls, sashimi, and sets and add to
-                cart.
+                Browse our selection of fresh sushi rolls, sashimi, and sets and
+                add to cart.
               </p>
             </div>
 
@@ -113,7 +121,8 @@ export default function Index() {
                 We prepare fresh
               </h3>
               <p className="text-gray-600">
-                Our expert sushi chefs prepare your order fresh and pack carefully for delivery.
+                Our expert sushi chefs prepare your order fresh and pack
+                carefully for delivery.
               </p>
             </div>
 
@@ -144,12 +153,19 @@ export default function Index() {
               // Get all popular items from restaurant menus
               const allPopularItems = Object.values(restaurantMenus)
                 .flat()
-                .filter(item => item.popular)
-                .sort((a, b) => b.reviews.rating * b.reviews.count - a.reviews.rating * a.reviews.count)
+                .filter((item) => item.popular)
+                .sort(
+                  (a, b) =>
+                    b.reviews.rating * b.reviews.count -
+                    a.reviews.rating * a.reviews.count,
+                )
                 .slice(0, 4);
 
               return allPopularItems.map((item) => (
-                <Card key={item.id} className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
+                <Card
+                  key={item.id}
+                  className="bg-white border-none shadow-sm hover:shadow-md transition-shadow"
+                >
                   <CardContent className="p-6">
                     <div
                       className="rounded-lg h-32 mb-4 bg-cover bg-center bg-gray-100"
@@ -157,12 +173,14 @@ export default function Index() {
                         backgroundImage: `url(${item.image})`,
                       }}
                     />
-                    <h3 className="font-bold text-black mb-1">
-                      {item.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-3">{item.description}</p>
+                    <h3 className="font-bold text-black mb-1">{item.name}</h3>
+                    <p className="text-sm text-gray-600 mb-3">
+                      {item.description}
+                    </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-black">${item.price}</span>
+                      <span className="text-lg font-bold text-black">
+                        ${item.price}
+                      </span>
                       <Button
                         size="sm"
                         className="bg-primary hover:bg-primary/90 text-white rounded-full"
