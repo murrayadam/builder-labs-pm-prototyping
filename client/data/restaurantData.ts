@@ -30,6 +30,7 @@ export const mockRestaurants: Restaurant[] = [
       "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
     categories: ["sushi-rolls", "nigiri", "sashimi"],
     featured: true,
+    coordinates: { lat: 37.7749, lng: -122.4194 },
   },
   {
     id: "2",
