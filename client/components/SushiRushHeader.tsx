@@ -55,12 +55,16 @@ export default function SushiRushHeader({ searchQuery = "", onSearchChange, cart
           <div className="flex gap-2 justify-end">
             {/* Address Picker */}
             <div className="flex items-center">
-              <button className="flex items-center bg-gray-100 rounded-full min-h-8 px-3 hover:bg-gray-200 transition-colors">
+              <button
+                onClick={refreshLocation}
+                disabled={isLoadingLocation}
+                className="flex items-center bg-gray-100 rounded-full min-h-8 px-3 hover:bg-gray-200 transition-colors disabled:opacity-50"
+              >
                 <span className="flex items-center w-4">
-                  <MapPin className="h-4 w-4 text-gray-600" />
+                  <MapPin className={`h-4 w-4 text-gray-600 ${isLoadingLocation ? 'animate-pulse' : ''}`} />
                 </span>
-                <span className="flex-grow mx-1 font-bold text-sm truncate">
-                  123 Mockingbird Ln
+                <span className="flex-grow mx-1 font-bold text-sm truncate max-w-32">
+                  {isLoadingLocation ? 'Locating...' : `${userLocation.lat.toFixed(3)}, ${userLocation.lng.toFixed(3)}`}
                 </span>
                 <span className="flex items-center w-4">
                   <ChevronDown className="h-4 w-4 text-gray-600" />
