@@ -36,6 +36,16 @@ export default function Order() {
 
       <main className="pt-2 pb-12">
         <div className="max-w-full mx-auto">
+          {/* Restaurant Map/List View */}
+          <div className="bg-white mb-8 p-6">
+            <RestaurantView
+              restaurants={filteredRestaurants}
+              title="Restaurants Near You"
+              showToggle={true}
+              defaultView="list"
+            />
+          </div>
+
           <div className="bg-white">
             {Object.entries(categoryLabels).map(
               ([categoryId, categoryLabel]) => {
