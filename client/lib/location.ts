@@ -10,16 +10,21 @@ export const DEFAULT_USER_LOCATION: Coordinates = {
 };
 
 // Calculate distance between two coordinates using Haversine formula
-export function calculateDistance(point1: Coordinates, point2: Coordinates): number {
+export function calculateDistance(
+  point1: Coordinates,
+  point2: Coordinates,
+): number {
   const R = 3959; // Earth's radius in miles
   const dLat = toRadians(point2.lat - point1.lat);
   const dLng = toRadians(point2.lng - point1.lng);
-  
-  const a = 
+
+  const a =
     Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(toRadians(point1.lat)) * Math.cos(toRadians(point2.lat)) *
-    Math.sin(dLng / 2) * Math.sin(dLng / 2);
-  
+    Math.cos(toRadians(point1.lat)) *
+      Math.cos(toRadians(point2.lat)) *
+      Math.sin(dLng / 2) *
+      Math.sin(dLng / 2);
+
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return R * c;
 }
@@ -37,10 +42,10 @@ export function formatDistance(miles: number): string {
 export function getCurrentLocation(): Promise<Coordinates> {
   return new Promise((resolve, reject) => {
     if (!navigator.geolocation) {
-      reject(new Error('Geolocation is not supported'));
+      reject(new Error("Geolocation is not supported"));
       return;
     }
-    
+
     navigator.geolocation.getCurrentPosition(
       (position) => {
         resolve({
@@ -50,10 +55,10 @@ export function getCurrentLocation(): Promise<Coordinates> {
       },
       (error) => {
         // If geolocation fails, fall back to default location
-        console.warn('Geolocation failed, using default location:', error);
+        console.warn("Geolocation failed, using default location:", error);
         resolve(DEFAULT_USER_LOCATION);
       },
-      { timeout: 10000, enableHighAccuracy: false }
+      { timeout: 10000, enableHighAccuracy: false },
     );
   });
 }
@@ -62,7 +67,7 @@ export function getCurrentLocation(): Promise<Coordinates> {
 export function isWithinDeliveryRadius(
   restaurantCoords: Coordinates,
   userCoords: Coordinates,
-  radiusMiles: number = 3
+  radiusMiles: number = 3,
 ): boolean {
   return calculateDistance(restaurantCoords, userCoords) <= radiusMiles;
 }

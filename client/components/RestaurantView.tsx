@@ -1,46 +1,59 @@
-import { useState } from 'react';
-import { Restaurant } from '@/data/restaurantData';
-import { useLocation } from '@/contexts/LocationContext';
-import { calculateDistance, formatDistance, isWithinDeliveryRadius } from '@/lib/location';
-import MapView from '@/components/MapView';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Map, List, Star, Clock, MapPin, Navigation } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Restaurant } from "@/data/restaurantData";
+import { useLocation } from "@/contexts/LocationContext";
+import {
+  calculateDistance,
+  formatDistance,
+  isWithinDeliveryRadius,
+} from "@/lib/location";
+import MapView from "@/components/MapView";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Map, List, Star, Clock, MapPin, Navigation } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface RestaurantViewProps {
   restaurants: Restaurant[];
   title?: string;
   showToggle?: boolean;
-  defaultView?: 'list' | 'map';
+  defaultView?: "list" | "map";
 }
 
-export default function RestaurantView({ 
-  restaurants, 
+export default function RestaurantView({
+  restaurants,
   title = "Restaurants Near You",
   showToggle = true,
-  defaultView = 'list'
+  defaultView = "list",
 }: RestaurantViewProps) {
-  const [viewMode, setViewMode] = useState<'list' | 'map'>(defaultView);
+  const [viewMode, setViewMode] = useState<"list" | "map">(defaultView);
   const { userLocation, refreshLocation, isLoadingLocation } = useLocation();
 
   // Calculate distances and filter restaurants within delivery radius
   const restaurantsWithDistance = restaurants
-    .map(restaurant => ({
+    .map((restaurant) => ({
       ...restaurant,
       actualDistance: calculateDistance(userLocation, restaurant.coordinates),
-      distance: formatDistance(calculateDistance(userLocation, restaurant.coordinates)),
-      withinRadius: isWithinDeliveryRadius(restaurant.coordinates, userLocation),
+      distance: formatDistance(
+        calculateDistance(userLocation, restaurant.coordinates),
+      ),
+      withinRadius: isWithinDeliveryRadius(
+        restaurant.coordinates,
+        userLocation,
+      ),
     }))
     .sort((a, b) => a.actualDistance - b.actualDistance);
 
-  const availableRestaurants = restaurantsWithDistance.filter(r => r.withinRadius);
-  const unavailableRestaurants = restaurantsWithDistance.filter(r => !r.withinRadius);
+  const availableRestaurants = restaurantsWithDistance.filter(
+    (r) => r.withinRadius,
+  );
+  const unavailableRestaurants = restaurantsWithDistance.filter(
+    (r) => !r.withinRadius,
+  );
 
   const handleRestaurantSelect = (restaurant: Restaurant) => {
     // Navigate to restaurant detail or handle selection
-    console.log('Selected restaurant:', restaurant.name);
+    console.log("Selected restaurant:", restaurant.name);
   };
 
   return (
@@ -59,7 +72,7 @@ export default function RestaurantView({
             )}
           </p>
         </div>
-        
+
         <div className="flex items-center space-x-3">
           <Button
             variant="outline"
@@ -68,25 +81,27 @@ export default function RestaurantView({
             disabled={isLoadingLocation}
             className="flex items-center"
           >
-            <Navigation className={`h-4 w-4 mr-2 ${isLoadingLocation ? 'animate-spin' : ''}`} />
+            <Navigation
+              className={`h-4 w-4 mr-2 ${isLoadingLocation ? "animate-spin" : ""}`}
+            />
             Update Location
           </Button>
-          
+
           {showToggle && (
             <div className="bg-gray-100 rounded-lg p-1 flex">
               <Button
-                variant={viewMode === 'list' ? 'default' : 'ghost'}
+                variant={viewMode === "list" ? "default" : "ghost"}
                 size="sm"
-                onClick={() => setViewMode('list')}
+                onClick={() => setViewMode("list")}
                 className="rounded-md"
               >
                 <List className="h-4 w-4 mr-2" />
                 List
               </Button>
               <Button
-                variant={viewMode === 'map' ? 'default' : 'ghost'}
+                variant={viewMode === "map" ? "default" : "ghost"}
                 size="sm"
-                onClick={() => setViewMode('map')}
+                onClick={() => setViewMode("map")}
                 className="rounded-md"
               >
                 <Map className="h-4 w-4 mr-2" />
@@ -98,7 +113,7 @@ export default function RestaurantView({
       </div>
 
       {/* Content */}
-      {viewMode === 'map' ? (
+      {viewMode === "map" ? (
         <div className="h-96 rounded-lg overflow-hidden border">
           <MapView
             restaurants={availableRestaurants}
@@ -111,7 +126,9 @@ export default function RestaurantView({
           {/* Available restaurants */}
           {availableRestaurants.length > 0 && (
             <div>
-              <h3 className="text-lg font-semibold text-black mb-4">Available for Delivery</h3>
+              <h3 className="text-lg font-semibold text-black mb-4">
+                Available for Delivery
+              </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {availableRestaurants.map((restaurant) => (
                   <RestaurantCard
@@ -123,11 +140,13 @@ export default function RestaurantView({
               </div>
             </div>
           )}
-          
+
           {/* Unavailable restaurants */}
           {unavailableRestaurants.length > 0 && (
             <div>
-              <h3 className="text-lg font-semibold text-gray-500 mb-4">Outside Delivery Area</h3>
+              <h3 className="text-lg font-semibold text-gray-500 mb-4">
+                Outside Delivery Area
+              </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 opacity-60">
                 {unavailableRestaurants.map((restaurant) => (
                   <RestaurantCard
@@ -145,17 +164,19 @@ export default function RestaurantView({
   );
 }
 
-function RestaurantCard({ 
-  restaurant, 
-  onSelect, 
-  disabled = false 
-}: { 
-  restaurant: Restaurant & { actualDistance: number }; 
+function RestaurantCard({
+  restaurant,
+  onSelect,
+  disabled = false,
+}: {
+  restaurant: Restaurant & { actualDistance: number };
   onSelect?: (restaurant: Restaurant) => void;
   disabled?: boolean;
 }) {
   return (
-    <Card className={`hover:shadow-md transition-shadow ${disabled ? 'opacity-60' : ''}`}>
+    <Card
+      className={`hover:shadow-md transition-shadow ${disabled ? "opacity-60" : ""}`}
+    >
       <CardContent className="p-4">
         <div
           className="rounded-lg h-32 mb-3 bg-cover bg-center bg-gray-100"
@@ -163,17 +184,21 @@ function RestaurantCard({
             backgroundImage: `url(${restaurant.image})`,
           }}
         />
-        
+
         <div className="space-y-2">
           <div className="flex items-start justify-between">
             <h3 className="font-bold text-black">{restaurant.name}</h3>
             {restaurant.featured && (
-              <Badge variant="secondary" className="text-xs">Featured</Badge>
+              <Badge variant="secondary" className="text-xs">
+                Featured
+              </Badge>
             )}
           </div>
-          
-          <p className="text-sm text-gray-600 line-clamp-2">{restaurant.description}</p>
-          
+
+          <p className="text-sm text-gray-600 line-clamp-2">
+            {restaurant.description}
+          </p>
+
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center space-x-3">
               <div className="flex items-center">
@@ -190,7 +215,7 @@ function RestaurantCard({
               <span>{restaurant.deliveryTime}</span>
             </div>
           </div>
-          
+
           {!disabled && (
             <Button
               asChild
@@ -200,13 +225,9 @@ function RestaurantCard({
               <Link to={`/restaurant/${restaurant.id}`}>View Menu</Link>
             </Button>
           )}
-          
+
           {disabled && (
-            <Button
-              disabled
-              size="sm"
-              className="w-full rounded-full mt-3"
-            >
+            <Button disabled size="sm" className="w-full rounded-full mt-3">
               Outside Delivery Area
             </Button>
           )}

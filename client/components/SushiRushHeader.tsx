@@ -8,7 +8,11 @@ interface SushiRushHeaderProps {
   cartCount?: number;
 }
 
-export default function SushiRushHeader({ searchQuery = "", onSearchChange, cartCount = 0 }: SushiRushHeaderProps) {
+export default function SushiRushHeader({
+  searchQuery = "",
+  onSearchChange,
+  cartCount = 0,
+}: SushiRushHeaderProps) {
   const { userLocation, refreshLocation, isLoadingLocation } = useLocation();
 
   // Format coordinates for display (simplified for demo)
@@ -61,10 +65,14 @@ export default function SushiRushHeader({ searchQuery = "", onSearchChange, cart
                 className="flex items-center bg-gray-100 rounded-full min-h-8 px-3 hover:bg-gray-200 transition-colors disabled:opacity-50"
               >
                 <span className="flex items-center w-4">
-                  <MapPin className={`h-4 w-4 text-gray-600 ${isLoadingLocation ? 'animate-pulse' : ''}`} />
+                  <MapPin
+                    className={`h-4 w-4 text-gray-600 ${isLoadingLocation ? "animate-pulse" : ""}`}
+                  />
                 </span>
                 <span className="flex-grow mx-1 font-bold text-sm truncate max-w-32">
-                  {isLoadingLocation ? 'Locating...' : `${userLocation.lat.toFixed(3)}, ${userLocation.lng.toFixed(3)}`}
+                  {isLoadingLocation
+                    ? "Locating..."
+                    : `${userLocation.lat.toFixed(3)}, ${userLocation.lng.toFixed(3)}`}
                 </span>
                 <span className="flex items-center w-4">
                   <ChevronDown className="h-4 w-4 text-gray-600" />
