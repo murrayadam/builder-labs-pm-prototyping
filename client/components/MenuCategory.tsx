@@ -14,7 +14,7 @@ export default function MenuCategory({ title, items, quantities, onQuantityChang
 
   return (
     <div id={categoryId} className="mb-8">
-      <h2 className="text-2xl font-bold text-black mb-4 sticky top-52 bg-white py-2 z-[200]">
+      <h2 className="text-2xl font-bold text-black mb-4 sticky top-56 bg-white py-2 z-[200]">
         {title}
       </h2>
       <div className="space-y-3">
