@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { Clock, Shield, Truck, Star, ArrowRight, Package, Fish } from "lucide-react";
 import { Link } from "react-router-dom";
+import { restaurantMenus } from "@/data/menuItemData";
 
 export default function Index() {
   return (
