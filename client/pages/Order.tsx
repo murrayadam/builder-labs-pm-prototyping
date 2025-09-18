@@ -6,14 +6,6 @@ import { mockRestaurants, categoryLabels } from "@/data/restaurantData";
 
 export default function Order() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [quantities, setQuantities] = useState<Record<string, number>>({});
-
-  const handleQuantityChange = (itemId: string, newQuantity: number) => {
-    setQuantities(prev => ({
-      ...prev,
-      [itemId]: Math.max(0, newQuantity)
-    }));
-  };
 
   const filteredRestaurants = useMemo(() => {
     return mockRestaurants.filter(restaurant => {
