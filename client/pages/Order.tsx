@@ -1,23 +1,13 @@
 import { useState, useMemo } from "react";
 import SushiRushHeader from "@/components/SushiRushHeader";
 import CategorySection from "@/components/CategorySection";
-import MenuFilters from "@/components/MenuFilters";
 import MenuCategory from "@/components/MenuCategory";
 import Cart from "@/components/Cart";
 import { menuData, menuCategories } from "@/data/menuData";
 
 export default function Order() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [quantities, setQuantities] = useState<Record<string, number>>({});
-
-  const handleFilterToggle = (filter: string) => {
-    setActiveFilters(prev =>
-      prev.includes(filter)
-        ? prev.filter(f => f !== filter)
-        : [...prev, filter]
-    );
-  };
 
   const handleQuantityChange = (itemId: string, newQuantity: number) => {
     setQuantities(prev => ({
@@ -28,21 +18,11 @@ export default function Order() {
 
   const filteredItems = useMemo(() => {
     return menuData.filter(item => {
-      // Search filter
-      const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           item.description.toLowerCase().includes(searchQuery.toLowerCase());
-
-      // Tag filters
-      const matchesFilters = activeFilters.length === 0 ||
-                            activeFilters.every(filter => {
-                              if (filter === "trending") return item.trending;
-                              if (filter === "popular") return item.popular;
-                              return item.tags.includes(filter);
-                            });
-
-      return matchesSearch && matchesFilters;
+      // Search filter only
+      return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             item.description.toLowerCase().includes(searchQuery.toLowerCase());
     });
-  }, [searchQuery, activeFilters]);
+  }, [searchQuery]);
 
   const handleCategoryClick = (categoryId: string) => {
     const element = document.getElementById(categoryId);
@@ -61,10 +41,6 @@ export default function Order() {
         cartCount={totalCartItems}
       />
       <CategorySection onCategoryClick={handleCategoryClick} />
-      <MenuFilters
-        activeFilters={activeFilters}
-        onFilterToggle={handleFilterToggle}
-      />
 
       <main className="pt-2 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
