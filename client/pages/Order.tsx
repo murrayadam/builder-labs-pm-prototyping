@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import SushiRushHeader from "@/components/SushiRushHeader";
 import CategorySection from "@/components/CategorySection";
 import RestaurantCarousel from "@/components/RestaurantCarousel";
+import RestaurantView from "@/components/RestaurantView";
 import { mockRestaurants, categoryLabels } from "@/data/restaurantData";
 
 export default function Order() {
