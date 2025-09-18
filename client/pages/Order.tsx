@@ -42,24 +42,27 @@ export default function Order() {
       <CategorySection onCategoryClick={handleCategoryClick} />
 
       <main className="pt-2 pb-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg p-6 shadow-sm">
-            {menuCategories.map(category => {
-              const categoryItems = filteredItems.filter(item => item.category === category);
+        <div className="max-w-full mx-auto">
+          <div className="bg-white">
+            {Object.entries(categoryLabels).map(([categoryId, categoryLabel]) => {
+              const categoryRestaurants = filteredRestaurants.filter(restaurant =>
+                restaurant.categories.includes(categoryId)
+              );
+
+              if (categoryRestaurants.length === 0) return null;
+
               return (
-                <MenuCategory
-                  key={category}
-                  title={category}
-                  items={categoryItems}
-                  quantities={quantities}
-                  onQuantityChange={handleQuantityChange}
+                <RestaurantCarousel
+                  key={categoryId}
+                  title={categoryLabel}
+                  restaurants={categoryRestaurants}
                 />
               );
             })}
 
-            {filteredItems.length === 0 && (
+            {filteredRestaurants.length === 0 && (
               <div className="text-center py-12 text-gray-500">
-                <p className="text-lg font-medium">No items found</p>
+                <p className="text-lg font-medium">No restaurants found</p>
                 <p className="text-sm">Try adjusting your search or filters</p>
               </div>
             )}
