@@ -66,7 +66,7 @@ export default function Order() {
         onFilterToggle={handleFilterToggle}
       />
 
-      <main className="pt-8 pb-12">
+      <main className="pt-2 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
