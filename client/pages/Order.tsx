@@ -15,11 +15,11 @@ export default function Order() {
     }));
   };
 
-  const filteredItems = useMemo(() => {
-    return menuData.filter(item => {
+  const filteredRestaurants = useMemo(() => {
+    return mockRestaurants.filter(restaurant => {
       // Search filter only
-      return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             item.description.toLowerCase().includes(searchQuery.toLowerCase());
+      return restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             restaurant.description.toLowerCase().includes(searchQuery.toLowerCase());
     });
   }, [searchQuery]);
 
