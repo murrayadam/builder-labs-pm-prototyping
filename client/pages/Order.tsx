@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import SushiRushHeader from "@/components/SushiRushHeader";
 import CategorySection from "@/components/CategorySection";
 import MenuCategory from "@/components/MenuCategory";
-import Cart from "@/components/Cart";
 import { menuData, menuCategories } from "@/data/menuData";
 
 export default function Order() {
