@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Bell, ShoppingCart, Search, MapPin, ChevronDown } from "lucide-react";
+import { useLocation } from "@/contexts/LocationContext";
 
 interface SushiRushHeaderProps {
   searchQuery?: string;
