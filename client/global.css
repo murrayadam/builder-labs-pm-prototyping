@@ -1,5 +1,6 @@
 /** @import must precede all other statements */
 /* Using system fonts to match SushiRush's clean aesthetic */
+@import 'leaflet/dist/leaflet.css';
 
 @tailwind base;
 @tailwind components;
