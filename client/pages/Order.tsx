@@ -46,6 +46,7 @@ export default function Order() {
                   key={categoryId}
                   title={categoryLabel}
                   restaurants={categoryRestaurants}
+                  categoryId={categoryId}
                 />
               );
             })}
