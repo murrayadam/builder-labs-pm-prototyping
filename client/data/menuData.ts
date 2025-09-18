@@ -84,8 +84,6 @@ export const menuData: MenuItemType[] = [
 ];
 
 export const menuCategories = [
-  "Tempura",
-  "Appetizers",
   "Salads",
   "Ramen",
   "Desserts",
