@@ -33,23 +33,27 @@ This demo illustrates how Fusion enables rapid prototyping without extensive tec
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm (preferred package manager)
 
 ### Getting Started
 
 1. **Install Dependencies**
+
    ```bash
    pnpm install
    ```
 
 2. **Start Development Server**
+
    ```bash
    pnpm dev
    ```
+
    This starts both the frontend (React) and backend (Express) on port 8080.
 
 3. **Run Tests**
+
    ```bash
    pnpm test
    ```
@@ -112,7 +116,7 @@ shared/                   # Shared TypeScript types
 This application can be deployed to various platforms:
 
 - **Netlify** - Connect via Builder.io's Netlify integration
-- **Vercel** - Deploy through Builder.io's Vercel integration  
+- **Vercel** - Deploy through Builder.io's Vercel integration
 - **Self-hosted** - Use `pnpm build` and deploy the `dist/` folder
 
 ## Learning Resources
@@ -125,9 +129,10 @@ This application can be deployed to various platforms:
 ## Support
 
 For questions about Builder.io Fusion or this demo:
+
 - Review the [Builder.io Documentation](https://www.builder.io/c/docs/projects)
 - Contact Builder.io support for technical assistance
 
 ---
 
-*Built with ❤️ using Builder.io Fusion*
+_Built with ❤️ using Builder.io Fusion_
