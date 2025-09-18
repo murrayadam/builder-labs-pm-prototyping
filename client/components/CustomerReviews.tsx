@@ -1,5 +1,6 @@
 import { Star, ThumbsUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { CustomerReview } from "@/data/reviewData";
 
 interface CustomerReviewsProps {
