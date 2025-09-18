@@ -140,87 +140,40 @@ export default function Index() {
             Popular sushi
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Fish className="h-8 w-8 text-gray-400" />
-                </div>
-                <h3 className="font-bold text-black mb-1">
-                  California Roll
-                </h3>
-                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$12.99</span>
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
-                  >
-                    Add
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            {(() => {
+              // Get all popular items from restaurant menus
+              const allPopularItems = Object.values(restaurantMenus)
+                .flat()
+                .filter(item => item.popular)
+                .sort((a, b) => b.reviews.rating * b.reviews.count - a.reviews.rating * a.reviews.count)
+                .slice(0, 4);
 
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Fish className="h-8 w-8 text-gray-400" />
-                </div>
-                <h3 className="font-bold text-black mb-1">
-                  Salmon Avocado Roll
-                </h3>
-                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$15.99</span>
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
-                  >
-                    Add
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Fish className="h-8 w-8 text-gray-400" />
-                </div>
-                <h3 className="font-bold text-black mb-1">
-                  Spicy Tuna Roll
-                </h3>
-                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$13.99</span>
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
-                  >
-                    Add
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-gray-100 rounded-lg h-32 mb-4 flex items-center justify-center">
-                  <Fish className="h-8 w-8 text-gray-400" />
-                </div>
-                <h3 className="font-bold text-black mb-1">Rainbow Roll</h3>
-                <p className="text-sm text-gray-600 mb-3">8 pieces</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-black">$18.99</span>
-                  <Button
-                    size="sm"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
-                  >
-                    Add
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+              return allPopularItems.map((item) => (
+                <Card key={item.id} className="bg-white border-none shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6">
+                    <div
+                      className="rounded-lg h-32 mb-4 bg-cover bg-center bg-gray-100"
+                      style={{
+                        backgroundImage: `url(${item.image})`,
+                      }}
+                    />
+                    <h3 className="font-bold text-black mb-1">
+                      {item.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-3">{item.description}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-lg font-bold text-black">${item.price}</span>
+                      <Button
+                        size="sm"
+                        className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                      >
+                        Add
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ));
+            })()}
           </div>
         </div>
       </section>
