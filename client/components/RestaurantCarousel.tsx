@@ -34,8 +34,15 @@ export default function RestaurantCarousel({ restaurants, title }: RestaurantCar
             {title}
           </h2>
         </div>
-        
+
         <div className="flex items-center gap-4">
+          <Button
+            variant="outline"
+            size="sm"
+            className="rounded-full h-8 px-3 bg-gray-100 hover:bg-gray-200 text-sm font-bold"
+          >
+            See All
+          </Button>
           <Button
             variant="outline"
             size="sm"
@@ -45,7 +52,7 @@ export default function RestaurantCarousel({ restaurants, title }: RestaurantCar
             <ChevronLeft className="h-4 w-4 text-gray-600" />
           </Button>
           <Button
-            variant="outline" 
+            variant="outline"
             size="sm"
             className="rounded-full h-8 w-8 p-0 bg-gray-100 hover:bg-gray-200"
             onClick={scrollRight}
