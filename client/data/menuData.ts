@@ -205,7 +205,6 @@ export const menuData: MenuItemType[] = [
 ];
 
 export const menuCategories = [
-  "Nigiri",
   "Sashimi",
   "Bento Boxes",
   "Tempura",
