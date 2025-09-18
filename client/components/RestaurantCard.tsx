@@ -8,7 +8,7 @@ interface RestaurantCardProps {
 
 export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
   return (
-    <div className="flex-shrink-0 w-60 mb-4 relative cursor-pointer hover:transform hover:scale-105 transition-transform">
+    <Link to={`/restaurant/${restaurant.id}`} className="flex-shrink-0 w-60 mb-4 relative cursor-pointer hover:transform hover:scale-105 transition-transform block">
       <div className="relative">
         <div className="relative rounded-xl overflow-hidden h-44 bg-gray-100">
           <img
@@ -57,6 +57,6 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
